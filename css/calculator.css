@@ -1,0 +1,69 @@
+#calculator-wrapper{
+    /* Go with absolute so we could adjust top and left */ 
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    
+    /* Box model */
+    border: 2px solid #B4C7D7;
+    padding: 20px;  
+    width: 300px;
+    height: 200px;    
+    
+    /*
+    Calculate correction margins: 
+    Top as height / 2 + padding + border
+    Left as width / 2 + padding + border
+    */
+    margin:-122px 0 0 -172px;
+    background-color: #E9EFF6;
+    
+    /* Border radius with fallback */
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;     
+}
+
+#calculator-input-wrapper,
+#calculator-name,
+#calculator-div{
+    width: 300px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#calculator-input,
+#calculator-div{
+    border: 1px solid #C9C9C9;    
+    
+    /* Border radius with fallback */
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;          
+}
+
+/* Result display */
+#calculator-div{
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    background-color: #F8F8F8;
+    font-family: monospace;
+    font-size: 30px;
+    
+    /* Center result display verticaly */
+    height: 40px;
+    line-height: 40px;
+}
+
+/* Error span color */
+.calculator-error{
+    color: #E00;    
+}
+
+/* Input field */
+#calculator-input{
+    width: 290px;
+    /* Remove webkit outline */
+    outline: none    
+}
