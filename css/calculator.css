@@ -1,3 +1,4 @@
+/* Main wrapper */
 #calculator-wrapper{
     /* Go with absolute so we could adjust top and left */ 
     position: absolute;
