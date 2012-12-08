@@ -8,7 +8,7 @@
     /* Box model */
     border: 2px solid #B4C7D7;
     padding: 20px;  
-    width: 300px;
+    width: 400px;
     height: 200px;    
     
     /*
@@ -16,7 +16,7 @@
     Top as height / 2 + padding + border
     Left as width / 2 + padding + border
     */
-    margin:-122px 0 0 -172px;
+    margin:-122px 0 0 -272px;
     background-color: #E9EFF6;
     
     /* Border radius with fallback */
@@ -28,7 +28,6 @@
 #calculator-input-wrapper,
 #calculator-name,
 #calculator-div{
-    width: 300px;
     text-align: center;
     margin-bottom: 30px;
 }
@@ -47,7 +46,7 @@
 #calculator-div{
     margin-left: auto;
     margin-right: auto;
-    width: 200px;
+    width: 300px;
     background-color: #F8F8F8;
     font-family: monospace;
     font-size: 30px;
@@ -57,14 +56,20 @@
     line-height: 40px;
 }
 
+/* Input field */
+#calculator-input{
+    width: 300px;
+    font-size: 20px;
+    
+    /* Center input text verticaly */
+    height: 30px;
+    line-height: 30px;    
+    
+    /* Remove webkit outline */
+    outline: none    
+}
+
 /* Error span color */
 .calculator-error{
     color: #E00;    
-}
-
-/* Input field */
-#calculator-input{
-    width: 290px;
-    /* Remove webkit outline */
-    outline: none    
 }
