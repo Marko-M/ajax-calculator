@@ -68,6 +68,9 @@ $(document).ready(function() {
         if(code.toString() == 13) {
             /* Prevent all default actions for this input element */
             e.preventDefault();
+            
+            // Close autocomplete if open
+            $('#calculator-input').autocomplete('close');
 
             var term = $.trim($(this).val());
             if(term != ''){
