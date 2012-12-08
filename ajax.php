@@ -1,6 +1,6 @@
 <?php
 /**
- * Singleton class for calculator
+ * Ajax handler file
  *
  * @author Marko Martinović
  */
