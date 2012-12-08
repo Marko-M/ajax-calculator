@@ -49,6 +49,14 @@ final class Calculator {
         // If term empty after sanitize, abort
         if(empty($term))
             return false;
+        
+        // If there aren't at least one of accepted operators
+        if(
+            strpos($term, '+') === false &&
+            strpos($term, '-') === false &&
+            strpos($term, '*') === false &&
+            strpos($term, '/') === false
+        ) return false;        
 
         // Evaluates escaped term, if not successful, abort
         $result = @eval("return $term;");
@@ -96,20 +104,10 @@ final class Calculator {
         $stmt->execute();
     }
 
-    /* Sanitize term */
+    /* Sanitize term to make it safe for eval */
     private static function sanitize_term($term) {
         // Remove all except numeric and accepted operators
-        $term = preg_replace('/[^0-9\.\+\-\*\/\(\)]/', '', $term);
-        
-        // If there aren't of accepted operators found
-        if(
-            strpos($term, '+') === false &&
-            strpos($term, '-') === false &&
-            strpos($term, '*') === false &&
-            strpos($term, '/') === false
-        ) return false;
-        
-        return $term;
+        return preg_replace('/[^0-9\.\+\-\*\/\(\)]/', '', $term);
     }
 }
 ?>
