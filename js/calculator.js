@@ -1,7 +1,7 @@
 var calculator = {
     // Print error span into results div
-    go_error: function(){
-       $("#calculator-div").html('<span class="calculator-error">Error!</span>');
+    go_error: function(msg){
+       $("#calculator-div").html('<span class="calculator-error">'+msg+'</span>');
     },    
     // Update results div
     go_div: function(label){
@@ -31,7 +31,7 @@ var calculator = {
             success: function(data){
                 if(data.length === 0){
                     // If server returned empty array
-                    calculator.go_error('Parse error!');                   
+                    calculator.go_error('Error!');                   
                 }else{
                     /* If Server returned non empty array
                      * update input element and results div */
