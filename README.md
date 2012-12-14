@@ -1,6 +1,6 @@
 Ajax Calculator
 ===============
-This is a simple Ajax powered PHP Calculator that stores results cache inside database and uses jQuery UI to offer autocomplete. This program has been created as an execise and it doesn't have a lot of practical value.
+This is a simple Ajax powered PHP Calculator that stores results cache inside database and uses jQuery UI to offer autocomplete. This program has been created as an exercise and it doesn't have a lot of practical value.
 
 Instructions
 ------------
